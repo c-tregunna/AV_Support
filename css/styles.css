@@ -1,0 +1,304 @@
+* {
+	box-sizing: border-box;
+}
+
+/* MAIN PAGE STYLES */
+body {
+	background-color: #001E3D;
+	color: black;
+	font-family: 'Roboto', sans-serif;
+	font-size: 1em;
+	font-weight: 200;
+}
+
+h1 {
+	text-align: center;
+	font-family: 'Oswald', sans-serif;
+	font-size: 3.5em;
+	padding-top: 120px;
+	font-weight: 200;
+	letter-spacing: 8px;
+	margin: 0;
+	color: white;
+}
+
+h2 {
+	font-weight: 200;
+	font-family: 'Oswald', sans-serif;
+	letter-spacing: 3px;
+	text-decoration: underline;
+	text-align: center;
+	color: #001E3D;
+}
+
+h3 {
+	font-weight: 400;
+	font-family: 'Oswald', sans-serif;
+	letter-spacing: 3px;
+	color: #001E3D;
+}
+
+/* HEADER AND NAV STYLES */
+
+.main-header,
+.main-nav {
+	display: flex;
+	flex-direction: column;
+}
+
+.logo {
+  align-self: center;
+}
+
+.header-img {
+	width: 100%;
+	height: 500px;
+	background:linear-gradient(#001E3D, transparent 50%),
+              linear-gradient(to top, #FFF, transparent 40%),
+              url('../img/bcu-campus.jpg') no-repeat center;
+	background-size: cover;
+}
+
+.main-nav a {
+	list-style-type: none;
+	margin: 10px;
+	padding-bottom: 5px;
+	font-size: 1.25em;
+	font-weight: 300;
+	letter-spacing: 3px;
+	display: block;
+	text-align: center;
+	border-bottom: 1px solid #797e83;
+}
+
+.main-nav a:hover {
+	border-bottom: 1px solid #8BC43F;
+	color: #8BC43F;
+	/*text-decoration: underline;*/
+}
+
+
+/* LINK STYLES */
+
+a:link {
+	color: white;
+	text-decoration: none;
+}
+
+a:hover {
+	transition: all .5s;
+}
+
+a:visited {
+	color: white;
+}
+
+/* SECTION STYLES */
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	background-color: white;
+	align-items: stretch;
+	flex-wrap: wrap;
+}
+
+.img-wrap {
+	display: flex;
+	flex-wrap: wrap;
+	width: 80%;
+	margin: auto;
+	justify-content: center;
+}
+
+.about-us,
+.support-type,
+.contact-us {
+	width: 80%;
+	padding: 20px;
+	margin: auto;
+	text-align: justify;
+}
+
+.support-type,
+.contact-us {
+	border-top: 1px solid #001E3D;
+}
+
+.audio,
+.visual,
+.training {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.audio,
+.visual {
+	border-bottom: dashed 1px #001E3D;
+}
+
+
+footer {
+	width: 100%;
+	background-color: #001E3D;
+	color: white;
+	padding: 30px;
+}
+
+footer p{
+	float: left;
+}
+
+.footer-top {
+	float: right;
+	text-transform: uppercase;
+}
+
+/* IMAGE STYLES */
+
+.staff-img {
+	border: 1px solid #001E3D;
+	padding: 2px;
+	float: left;
+	display: inline;
+	margin: 30px;
+	border-radius: 50%;
+}
+
+figcaption {
+	text-align: center;
+}
+
+
+/* FORM STYLES */
+
+form {
+	outline: 0;
+	width: 80%;
+	color: #001E3D;
+	margin: auto;
+	text-align: left;
+	max-width: 600px;
+}
+
+fieldset {
+	border: none;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+	width: 100%;
+	font-size: 1.25em;
+	height: auto;
+	margin-bottom: 20px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+	outline: none;
+	border: 1px solid #001E3D;
+	background-color: #ddd;
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+textarea::placeholder {
+	font-size: .7em;
+	text-align: right;
+} 
+
+legend {
+	margin-bottom: 10px;
+}
+
+/* ---------------
+MEDIA QUERIES
+--------------- */
+
+@media (min-width: 769px) {
+
+
+	.main-header {
+		height: 200px;
+	}
+	.main-nav {
+    flex-direction: row;
+    color: red; 
+    justify-content: space-between; 
+    width: 60%;
+    margin: auto;
+	}
+
+	.main-nav a {
+		border-bottom: transparent;
+	}
+
+}
+
+@media (min-width: 1025px) {
+
+  .main-header {
+    flex-direction: row;
+
+  }
+  .logo {
+    margin-right: auto;
+  }
+
+  nav {
+  	align-self: center;
+  }
+  .main-nav {
+    margin-left: 0;
+    margin-right: 0;
+    width: 600px;
+    padding-right: 40px;
+
+  }
+
+  	.support-offered {
+		display: flex;
+		flex-direction: row;
+	}
+	.audio,
+	.visual {
+		border-right: dashed 1px #001E3D; 
+		border-bottom: none;
+	}
+	.audio,
+	.visual,
+	.training {
+		padding: 5px 20px;
+	}
+
+}
+
+
+
+	/* ---- Float clearfix ---- */
+
+	.clearfix::after {
+		content: " ";
+		display: table;
+		clear: both;
+	}
+
+
+
+
+/* DESKTOP STYLES */
+
+/*.about-us,
+.support-type {
+ 	width: 60%;
+ 	background-color: red;
+}
+
+.contact-us {
+	width: 30%;
+	background-color: blue;
+}*/
+
+
