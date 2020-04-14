@@ -55,7 +55,7 @@ h3 {
 	height: 500px;
 	background:linear-gradient(#001E3D, transparent 50%),
               linear-gradient(to top, #FFF, transparent 40%),
-              url('../img/bcu-campus.jpg') no-repeat center;
+              url('../img/uni-campus.jpg') no-repeat center;
 	background-size: cover;
 }
 
@@ -72,8 +72,8 @@ h3 {
 }
 
 .main-nav a:hover {
-	border-bottom: 1px solid #8BC43F;
-	color: #8BC43F;
+	border-bottom: 1px solid #fc9c73;
+	color: #fc9c73;
 	/*text-decoration: underline;*/
 }
 
@@ -137,6 +137,20 @@ a:visited {
 	border-bottom: dashed 1px #001E3D;
 }
 
+table {
+	width: 40%;
+	margin: auto;
+	font-size: 1.25em;
+}
+
+td {
+	padding: 6px;
+}
+
+.hours {
+	text-align: right;
+}
+
 
 footer {
 	width: 100%;
@@ -163,7 +177,15 @@ footer p{
 	display: inline;
 	margin: 30px;
 	border-radius: 50%;
+	opacity: .7;
+	transition-property: opacity;
+	transition-duration: 0.5s;
 }
+
+.staff-img:hover {
+	opacity: 1;
+}
+
 
 figcaption {
 	text-align: center;
@@ -198,7 +220,7 @@ input[type="text"]:focus,
 input[type="email"]:focus,
 textarea:focus {
 	outline: none;
-	border: 1px solid #001E3D;
+	border: 2px solid #001E3D;
 	background-color: #ddd;
 }
 
