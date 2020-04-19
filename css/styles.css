@@ -53,8 +53,8 @@ h3 {
 .header-img {
 	width: 100%;
 	height: 500px;
-	background:linear-gradient(#001E3D, transparent 50%),
-              linear-gradient(to top, #FFF, transparent 40%),
+	background:/*linear-gradient(#001E3D, transparent 70%),
+              linear-gradient(to top, #fefefe, transparent 40%),*/
               url('../img/uni-campus.jpg') no-repeat center;
 	background-size: cover;
 }
@@ -62,13 +62,13 @@ h3 {
 .main-nav a {
 	list-style-type: none;
 	margin: 10px;
-	padding-bottom: 5px;
 	font-size: 1.25em;
 	font-weight: 300;
 	letter-spacing: 3px;
 	display: block;
 	text-align: center;
 	border-bottom: 1px solid #797e83;
+	padding-bottom: 10px;
 }
 
 .main-nav a:hover {
@@ -98,7 +98,7 @@ a:visited {
 .wrapper {
 	display: flex;
 	flex-direction: column;
-	background-color: white;
+	background-color: #fefefe;
 	align-items: stretch;
 	flex-wrap: wrap;
 }
@@ -137,6 +137,11 @@ a:visited {
 	border-bottom: dashed 1px #001E3D;
 }
 
+.hire li {
+	list-style-type: disc;
+	list-style-position: inside;
+}
+
 table {
 	width: 40%;
 	margin: auto;
@@ -166,6 +171,11 @@ footer p{
 .footer-top {
 	float: right;
 	text-transform: uppercase;
+}
+
+.footer-top a:hover {
+	border-bottom: 1px solid #fc9c73;
+	color: #fc9c73;
 }
 
 /* IMAGE STYLES */
@@ -219,8 +229,8 @@ textarea {
 input[type="text"]:focus,
 input[type="email"]:focus,
 textarea:focus {
-	outline: none;
-	border: 2px solid #001E3D;
+	outline: 2px solid #001E3D;
+	/*border: 2px solid #001E3D;*/
 	background-color: #ddd;
 }
 
@@ -243,19 +253,28 @@ MEDIA QUERIES
 
 
 	.main-header {
-		height: 200px;
+		height: 250px;
 	}
+
 	.main-nav {
     flex-direction: row;
     color: red; 
     justify-content: space-between; 
-    width: 60%;
+    width: 90%;
     margin: auto;
 	}
 
 	.main-nav a {
-		border-bottom: transparent;
+		border-bottom: 1px solid transparent;
 	}
+
+/*	.main-nav li {
+		border-right: 1px solid #fff;
+	}
+
+	.main-nav li:last-child {
+		border-right: none;
+	}*/
 
 }
 
@@ -274,9 +293,8 @@ MEDIA QUERIES
   }
   .main-nav {
     margin-left: 0;
-    margin-right: 0;
-    width: 600px;
-    padding-right: 40px;
+    margin-right: 120px;
+    width: 90%;
 
   }
 
@@ -287,7 +305,7 @@ MEDIA QUERIES
 	.audio,
 	.visual {
 		border-right: dashed 1px #001E3D; 
-		border-bottom: none;
+		border-bottom: 1px solid transparent;
 	}
 	.audio,
 	.visual,
