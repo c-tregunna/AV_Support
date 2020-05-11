@@ -1,7 +1,8 @@
 // carosel header images
 
 $(document).ready(function(){
-    $('.your-class').slick({
-      infinate: true
+    $('.header-img').slick({
+      infinate: true,
+      centerMode: true,
     });
   });
