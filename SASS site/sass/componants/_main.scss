@@ -1,11 +1,13 @@
 * {
 	box-sizing: border-box;
+	scroll-behavior: smooth;
 }
 
 body {
 	background-color: $bg-body;
 	max-width: 1400px;
 	margin: auto;
+
 }
 
 .header-img {
@@ -58,3 +60,6 @@ body {
 	display: table;
 	clear: both;
 }
+
+//make staff modal
+//make services modal maybe one or the other?

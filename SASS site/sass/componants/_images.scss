@@ -5,7 +5,18 @@ img:not(.logo) {
     border: 1px solid #001E3D;
 	padding: 4px;
 	display: inline-block;
-	margin: 30px;
+    margin: 30px;
+    opacity: .7;
+	transition-property: opacity;
+    transition: 0.5s ease-in-out;
+    &:hover {
+        opacity: 1;
+	    transform: scale(1.04);
+    }
+}
+.equipment-img {
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+	filter: grayscale(100%);
 }
 
 .logo {
