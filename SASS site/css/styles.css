@@ -409,7 +409,154 @@ ul {
   list-style: none;
 }
 
+*:not(h1, h2, h3, h4, h5, h6) {
+  font-family: "Roboto", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h5 {
+  font-family: "Oswald", sans-serif;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3.5em;
+  font-weight: 400;
+  letter-spacing: 8px;
+  color: #fff;
+}
+
 /* HEADER AND NAV STYLES */
+@media (min-width: 1024px) {
+  nav {
+    align-self: center;
+  }
+}
+
+.main-header {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .main-header {
+    height: 250px;
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+@media (min-width: 1024px) {
+  .main-header {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.main-nav {
+  display: flex;
+  flex-direction: column;
+}
+.main-nav a {
+  list-style-type: none;
+  margin: 10px;
+  font-size: 1.25em;
+  font-weight: 300;
+  letter-spacing: 3px;
+  display: block;
+  text-align: center;
+  border-bottom: 1px solid #797e83;
+  padding-bottom: 10px;
+}
+@media (min-width: 768px) {
+  .main-nav a {
+    border-bottom: 1px solid transparent;
+  }
+}
+.main-nav a:hover {
+  border-bottom: 1px solid #fc9c73;
+  color: #fc9c73;
+}
+@media (min-width: 768px) {
+  .main-nav {
+    flex-direction: row;
+    color: red;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+  }
+}
+@media (min-width: 1024px) {
+  .main-nav {
+    margin-left: 0;
+    margin-right: 120px;
+    width: 90%;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #001E3D;
+  max-width: 1400px;
+  margin: auto;
+}
+
+.header-img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 500px;
+  background: url("../img/uni-campus.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  flex-wrap: wrap;
+  background-color: #fefefe;
+}
+
+.img-wrap {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: auto;
+}
+
+.about-us,
+.support-type,
+.contact-us {
+  width: 90%;
+  padding: 20px;
+  margin: auto;
+  text-align: justify;
+}
+
+.support-type,
+.contact-us {
+  border-top: 1px solid #001E3D;
+}
+
+.staff-name {
+  font-size: 1.25em;
+  text-align: center;
+}
+
+.staff-role {
+  font-style: italic;
+  text-align: center;
+}
+
 /* ---- Float clearfix ---- */
 .clearfix::after {
   content: " ";
@@ -419,10 +566,49 @@ ul {
 
 /* LINK STYLES */
 /* LINK STYLES */
+a:link {
+  color: #fff;
+  text-decoration: none;
+}
+
+a:hover {
+  transition: all 0.5s;
+}
+
+a:visited {
+  color: #fff;
+}
+
+.staff-name a {
+  color: #000;
+}
+
+.staff-name a:hover {
+  border-bottom: 1px solid #000;
+}
+
 /* IMAGE STYLES */
+img:not(.logo) {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  border: 1px solid #001E3D;
+  padding: 4px;
+  display: inline-block;
+  margin: 30px;
+}
+
+.logo {
+  width: 200px;
+  align-self: center;
+}
+@media (min-width: 1024px) {
+  .logo {
+    margin-right: auto;
+    width: 300px;
+  }
+}
+
 /* FORM STYLES */
-/* ---------------
-MEDIA QUERIES
---------------- */
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,24 +1,54 @@
 /* HEADER AND NAV STYLES */
 
-// .main-header,
-// .main-nav {
-// 	display: flex;
-// 	flex-direction: column;
-// }
+nav {
+	@include medqL($break-l) {
+		align-self: center;
+	}
+}
+.main-header{
+	@include flex($dir: column);
+	@include medq($break-m) {
+		height: 250px;
+		@include flex($just: space-evenly);
+	}
+	@include medqL($break-l) {
+		@include flex($dir: row);
+		}
+}
 
-// .main-nav a {
-// 	list-style-type: none;
-// 	margin: 10px;
-// 	font-size: 1.25em;
-// 	font-weight: 300;
-// 	letter-spacing: 3px;
-// 	display: block;
-// 	text-align: center;
-// 	border-bottom: 1px solid #797e83;
-// 	padding-bottom: 10px;
-// }
+.main-nav {
+	@include flex($dir: column);
+	& a {
+	list-style-type: none;
+	margin: 10px;
+	font-size: 1.25em;
+	font-weight: 300;
+	letter-spacing: 3px;
+	display: block;
+	text-align: center;
+	border-bottom: 1px solid #797e83;
+	padding-bottom: 10px;
+	@include medq($break-m) {
+		border-bottom: 1px solid transparent;
+	}
+	}
+	& a:hover {
+		border-bottom: 1px solid $hover;
+		color: $hover;
 
-// .main-nav a:hover {
-// 	border-bottom: 1px solid $hover;
-// 	color: $hover;
-// }
+	}
+	@include medq($break-m) {
+		flex-direction: row;
+    	color: red;
+    	justify-content: space-between;
+    	width: 90%;
+    	margin: auto;
+	}
+	@include medqL($break-l) {
+		margin-left: 0;
+    	margin-right: 120px;
+    	width: 90%;
+	}
+}
+
+

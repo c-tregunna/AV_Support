@@ -10,11 +10,12 @@
     }
 }
 
-@mixin flex($disp: flex, $dir: null, $just: null, $align: null) {
+@mixin flex($disp: flex, $dir: null, $just: null, $align: null, $wrap: null) {
     display: $disp;
     flex-direction: $dir;
     justify-content: $just;
     align-items: $align;
+    flex-wrap: $wrap;
     @content;
 }
 

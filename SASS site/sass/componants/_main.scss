@@ -1,22 +1,55 @@
-// * {
-// 	box-sizing: border-box;
-// }
+* {
+	box-sizing: border-box;
+}
 
-// body {
-// 	background-color: $bg-body;
-// }
+body {
+	background-color: $bg-body;
+	max-width: 1400px;
+	margin: auto;
+}
 
-// .header-img {
-// 	@include flex($dir: column, $just: center, $align: center);
-// 	width: 100%;
-// 	height: 500px;
-// 	// background: url('../img/uni-campus.jpg') no-repeat center;
-// 	background-size: cover;
-// }
+.header-img {
+	@include flex($dir: column, $just: center, $align: center);
+	width: 100%;
+	height: 500px;
+	background: url('../img/uni-campus.jpg') no-repeat center;
+	background-size: cover;
+}
 
-// .wrapper {
-// 	background-color: $bg-main
-// }
+.wrapper {
+	@include flex($dir: column, $align: stretch, $wrap: wrap);
+	background-color: $bg-main
+}
+
+.img-wrap {
+	@include flex($wrap: wrap, $just: center);
+	width: 80%;
+	margin: auto;
+}
+
+.about-us,
+.support-type,
+.contact-us {
+	width: 90%;
+	padding: 20px;
+	margin: auto;
+	text-align: justify;
+}
+
+.support-type,
+.contact-us {
+	border-top: 1px solid #001E3D;
+}
+
+.staff-name {
+	font-size: 1.25em;
+	text-align: center;
+}
+
+.staff-role{
+	font-style: italic;
+	text-align: center;
+}
 
 /* ---- Float clearfix ---- */
 

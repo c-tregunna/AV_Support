@@ -1,9 +1,18 @@
 /* IMAGE STYLES */
 
-// img:not(.logo) {
-//     @include image($height: 150px, $width: 150px, $borderR: 50%);
-// }
+img:not(.logo) {
+    @include image($height: 150px, $width: 150px, $borderR: 50%);
+    border: 1px solid #001E3D;
+	padding: 4px;
+	display: inline-block;
+	margin: 30px;
+}
 
-// .logo {
-//     align-self: center;
-//   }
+.logo {
+    width: 200px;
+    align-self: center;
+    @include medqL($break-l) {
+        margin-right: auto;
+        width: 300px;
+    }
+  }
