@@ -497,6 +497,11 @@ h1 {
   }
 }
 
+footer a:hover {
+  border-bottom: 1px solid #fc9c73;
+  color: #fc9c73;
+}
+
 * {
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -711,19 +716,22 @@ fieldset {
 
 input[type=text],
 input[type=email],
-textarea {
+textarea,
+button {
   width: 100%;
   font-size: 1.25em;
   height: auto;
   margin-bottom: 20px;
+  border: 1px solid #000;
+  border-radius: 4px;
   transition: background-color 0.5s ease-in;
 }
 
 input[type=text]:focus,
 input[type=email]:focus,
 textarea:focus {
-  outline: 1px solid #001E3D;
-  background-color: #ddd;
+  outline: none;
+  background-color: #e6e6e6;
 }
 
 input[type=text]::placeholder,
@@ -735,6 +743,63 @@ textarea::placeholder {
 
 legend {
   margin-bottom: 10px;
+}
+
+button:hover {
+  background-color: #fc9c73;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(100, 100, 100, 0.4);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.modal {
+  width: 70%;
+  margin: 10vh auto;
+  background-color: #fefefe;
+  position: relative;
+  box-shadow: 0px 6px 8px #001E3D;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  width: 95%;
+  margin: auto;
+  padding: 20px;
+}
+
+.modal-close {
+  font-size: 1.5em;
+  z-index: 10000;
+  top: 5px;
+  right: 5px;
+}
+
+.modal-close svg {
+  width: 15px;
+  height: 15px;
+  opacity: 0.1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.modal-close svg:hover {
+  opacity: 1;
 }
 
 /*# sourceMappingURL=styles.css.map */

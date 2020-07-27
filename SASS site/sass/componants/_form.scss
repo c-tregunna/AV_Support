@@ -15,19 +15,22 @@ fieldset {
 
 input[type="text"],
 input[type="email"],
-textarea {
+textarea,
+button {
 	width: 100%;
 	font-size: 1.25em;
 	height: auto;
 	margin-bottom: 20px;
+	border: 1px solid $black;
+	border-radius: 4px;
 	transition: background-color .5s ease-in;
 }
 
 input[type="text"]:focus,
 input[type="email"]:focus,
 textarea:focus {
-	outline: 1px solid $bg-body;
-	background-color: #ddd;
+	outline: none;
+	background-color: darken($white, 10%);
 }
 
 input[type="text"]::placeholder,
@@ -39,4 +42,8 @@ textarea::placeholder {
 
 legend {
 	margin-bottom: 10px;
+}
+
+button:hover {
+	background-color: $hover;
 }

@@ -1,0 +1,47 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(100, 100, 100, .4);
+    height: 100vh;
+    @include flex($just: center, $align: center);
+}
+
+.hidden {
+    display: none;
+}
+
+.modal {
+    width: 70%;
+    margin: 10vh auto;
+    background-color: $bg-main;
+    position: relative;
+    box-shadow: 0px 6px 8px $bg-body;
+}
+
+.modal-content {
+    @include flex($dir: column, $just: start, $align: center);
+    width: 95%;
+    margin: auto;
+    padding: 20px;
+}
+
+.modal-close {
+    font-size: 1.5em;
+    z-index: 10000;
+    top: 5px;
+    right: 5px;
+}
+
+.modal-close svg {
+    width: 15px;
+    height: 15px;
+    opacity: .1;
+    transition: opacity .3s ease-in-out;
+}
+
+.modal-close svg:hover {
+   opacity: 1;
+}
