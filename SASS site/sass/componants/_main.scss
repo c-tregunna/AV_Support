@@ -5,7 +5,7 @@
 
 body {
 	background-color: $bg-body;
-	max-width: 1400px;
+	max-width: 1300px;
 	margin: auto;
 
 }
@@ -25,8 +25,12 @@ body {
 
 .img-wrap {
 	@include flex($wrap: wrap, $just: center);
-	width: 80%;
+	width: 100%;
 	margin: auto;
+}
+
+.img-wrap > div {
+	@include flex($dir: column, $just: space-evenly);
 }
 
 .about-us,
@@ -52,6 +56,65 @@ body {
 	font-style: italic;
 	text-align: center;
 }
+
+.audio,
+.visual,
+.training {
+	width: 90%;
+	margin: 0 auto;
+}
+
+.support-offered {
+	@include medqL($break-l) {
+		@include flex($dir: row);
+	}
+}
+
+
+.audio,
+.visual
+ {
+	border-bottom: dashed 1px $bg-body;
+	@include medqL($break-l) {
+		border-right: dashed 1px #001E3D;
+		border-bottom: 1px solid transparent;
+		padding: 5px 20px;
+	}
+}
+
+.training {
+	@include medqL($break-l) {
+		padding: 5px 20px;
+	}
+}
+
+table {
+	width: 40%;
+	margin: auto;
+	font-size: 1.25em;
+}
+
+td {
+	padding: 6px;
+}
+
+.hours {
+	text-align: right;
+}
+
+footer {
+	width: 100%;
+	background-color: $bg-body;
+	color: $white;
+	padding: 30px;
+	@include flex($dir: column, $just: space-evenly, $align: center);
+
+	@include medq($break-m) {
+		@include flex($dir: row, $just: space-between);
+	}
+}
+
+
 
 /* ---- Float clearfix ---- */
 

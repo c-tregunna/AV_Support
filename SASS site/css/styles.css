@@ -453,6 +453,7 @@ h1 {
   .main-header {
     display: flex;
     flex-direction: row;
+    height: 150px;
   }
 }
 
@@ -483,7 +484,6 @@ h1 {
 @media (min-width: 768px) {
   .main-nav {
     flex-direction: row;
-    color: red;
     justify-content: space-between;
     width: 90%;
     margin: auto;
@@ -504,7 +504,7 @@ h1 {
 
 body {
   background-color: #001E3D;
-  max-width: 1400px;
+  max-width: 1300px;
   margin: auto;
 }
 
@@ -531,8 +531,14 @@ body {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  width: 80%;
+  width: 100%;
   margin: auto;
+}
+
+.img-wrap > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 .about-us,
@@ -557,6 +563,71 @@ body {
 .staff-role {
   font-style: italic;
   text-align: center;
+}
+
+.audio,
+.visual,
+.training {
+  width: 90%;
+  margin: 0 auto;
+}
+
+@media (min-width: 1024px) {
+  .support-offered {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.audio,
+.visual {
+  border-bottom: dashed 1px #001E3D;
+}
+@media (min-width: 1024px) {
+  .audio,
+.visual {
+    border-right: dashed 1px #001E3D;
+    border-bottom: 1px solid transparent;
+    padding: 5px 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .training {
+    padding: 5px 20px;
+  }
+}
+
+table {
+  width: 40%;
+  margin: auto;
+  font-size: 1.25em;
+}
+
+td {
+  padding: 6px;
+}
+
+.hours {
+  text-align: right;
+}
+
+footer {
+  width: 100%;
+  background-color: #001E3D;
+  color: #fff;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 /* ---- Float clearfix ---- */
@@ -597,7 +668,7 @@ img:not(.logo) {
   border: 1px solid #001E3D;
   padding: 4px;
   display: inline-block;
-  margin: 30px;
+  margin: 10px 30px;
   opacity: 0.7;
   transition-property: opacity;
   transition: 0.5s ease-in-out;
@@ -625,5 +696,45 @@ img:not(.logo):hover {
 }
 
 /* FORM STYLES */
+form {
+  outline: 0;
+  width: 80%;
+  color: #001E3D;
+  margin: auto;
+  text-align: left;
+  max-width: 600px;
+}
+
+fieldset {
+  border: none;
+}
+
+input[type=text],
+input[type=email],
+textarea {
+  width: 100%;
+  font-size: 1.25em;
+  height: auto;
+  margin-bottom: 20px;
+  transition: background-color 0.5s ease-in;
+}
+
+input[type=text]:focus,
+input[type=email]:focus,
+textarea:focus {
+  outline: 1px solid #001E3D;
+  background-color: #ddd;
+}
+
+input[type=text]::placeholder,
+input[type=email]::placeholder,
+textarea::placeholder {
+  font-size: 0.7em;
+  text-align: right;
+}
+
+legend {
+  margin-bottom: 10px;
+}
 
 /*# sourceMappingURL=styles.css.map */
