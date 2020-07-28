@@ -1,3 +1,5 @@
+//Array of staff information to be loaded in to modal
+
 let staffs = [
     {
     name: 'John Smith',
@@ -21,25 +23,22 @@ let staffs = [
     }
 ];
 
-//select random staff to display
-
-const modal = document.querySelector('.modal-content');
-let html = '';
 
 
+const modal = document.querySelector('.modal-content'); // Modal where html will go
+let html = ''; // empty to input the staff data from array
 
-
+const staffInfo = document.querySelector('.staff-img-wrap'); // container for staff card to click to open modal
+let overlay = document.querySelector('.overlay'); // overlay containing modal
 // Display modal when click a card
-const staffInfo = document.querySelector('.staff-img-wrap');
-let overlay = document.querySelector('.overlay');
-
 staffInfo.addEventListener('click', e => {
 
     if (e.target !== staffInfo) {
-        const card = e.target.closest(".card");
-        overlay.classList.remove('hidden');
+        const card = e.target.closest(".card"); //only if you click the div .card
+        overlay.classList.remove('hidden'); //remove hidden class from overlay
     }
-    let singleStaff = staffs[Math.floor(Math.random() * staffs.length)];
+    let singleStaff = staffs[Math.floor(Math.random() * staffs.length)]; //select random staff to display
+    //the html that will go in to the modal
     html += `
     <h2>${singleStaff.name}</h2>
     <hr>
@@ -47,12 +46,21 @@ staffInfo.addEventListener('click', e => {
   `;
   console.log(html);
 
-  modal.innerHTML = html;
+  modal.innerHTML = html; //insert html into modal
 });
 
 //Close modal
-const closeModal = document.querySelector('.modal-close');
+const closeModal = document.querySelector('.modal-close'); //select the close icon
 closeModal.addEventListener('click', e => {
-    overlay.classList.add('hidden');
-    html = '';
+    overlay.classList.add('hidden'); //on click add hidden to overlay
+    html = ''; // clear the html so when you open the next modal it only have one staff info
+});
+
+//thank you for form submit
+
+const formSubmit = document.querySelector('.submit');
+
+formSubmit.addEventListener('click', e => {
+    e.preventDefault();
+    alert('Thank you, you query has been submitted and we will be in touch soon');
 });
