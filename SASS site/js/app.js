@@ -58,7 +58,7 @@ closeModal.addEventListener('click', e => {
 
 //thank you for form submit
 
-const formSubmit = document.querySelector('.submit');
+
 function validateForm() {
     let userName = document.forms["contact-form"]["user_name"].value;
     let userEmail = document.forms["contact-form"]["user_email"].value;
@@ -73,6 +73,7 @@ function validateForm() {
     }
   }
 
+const formSubmit = document.querySelector('button');
 formSubmit.addEventListener('click', e => {
     e.preventDefault();
     validateForm();
