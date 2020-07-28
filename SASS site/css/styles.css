@@ -532,6 +532,7 @@ body {
   background-color: #fefefe;
 }
 
+.staff-img-wrap,
 .img-wrap {
   display: flex;
   justify-content: center;
@@ -540,7 +541,7 @@ body {
   margin: auto;
 }
 
-.img-wrap > div {
+.staff-img-wrap > div {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -767,11 +768,16 @@ button:hover {
 }
 
 .modal {
-  width: 70%;
+  width: 40%;
   margin: 10vh auto;
   background-color: #fefefe;
   position: relative;
   box-shadow: 0px 6px 8px #001E3D;
+}
+
+.modal hr {
+  border: 1px solid;
+  width: 80%;
 }
 
 .modal-content {
@@ -794,7 +800,7 @@ button:hover {
 .modal-close svg {
   width: 15px;
   height: 15px;
-  opacity: 0.1;
+  opacity: 0.5;
   transition: opacity 0.3s ease-in-out;
 }
 

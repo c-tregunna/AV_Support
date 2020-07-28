@@ -23,13 +23,14 @@ body {
 	background-color: $bg-main
 }
 
+.staff-img-wrap,
 .img-wrap {
 	@include flex($wrap: wrap, $just: center);
 	width: 100%;
 	margin: auto;
 }
 
-.img-wrap > div {
+.staff-img-wrap > div {
 	@include flex($dir: column, $just: space-evenly);
 }
 

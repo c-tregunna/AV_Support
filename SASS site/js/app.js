@@ -1,42 +1,58 @@
-let employees = [];
-const urlAPI = 'https://randomuser.me/api/?results=12&inc=name, email, phone, &nat=GB';
-const overlay = document.querySelector('.overlay');
-const modal = document.querySelector('.modal-content');
-const closeModal = document.querySelector('.modal-close');
-const modalContainer = document.querySelector('.modal');
-
-/*--------------
-Fetch info from API
---------------*/
-fetch(urlAPI)
-    .then(res => res.json())
-    .then(res => res.results)
-    .then(displayEmployees)
-    .catch(err => console.log(err))
-
-    function displayEmployees(employeeData) {
-        employees = employeeData;
-        console.log(employeeData);
-
-        employees.forEach((employee, index) => {
-            let name = employee.name;
-            let email = employee.email;
-
-            const modalHTML = `
-
-            <div class="text-container">
-                <h2 class="name">${name.first} ${name.last}</h2>
-                <hr>
-                <p class="email">${email}</p>
-            </div>
-            `;
-        });
-        overlay.classList.remove('hidden');
-        modal.innerHTML = modalHTML;
+let staffs = [
+    {
+    name: 'John Smith',
+    email: 'johnsmith@avsupport.com'
+    },
+    {
+    name: 'Sarah John',
+    email: 'sarahjohn@avsupport.com'
+    },
+    {
+    name: 'Rob Time',
+    email: 'robtime@avsupport.com'
+    },
+    {
+    name: 'Sue Hand',
+    email: 'suehand@avsupport.com'
+    },
+    {
+    name: 'Tim Once',
+    email: 'timonce@avsupport.com'
     }
+];
+
+//select random staff to display
+
+const modal = document.querySelector('.modal-content');
+let html = '';
+
+
+
+
+// Display modal when click a card
+const staffInfo = document.querySelector('.staff-img-wrap');
+let overlay = document.querySelector('.overlay');
+
+staffInfo.addEventListener('click', e => {
+
+    if (e.target !== staffInfo) {
+        const card = e.target.closest(".card");
+        overlay.classList.remove('hidden');
+    }
+    let singleStaff = staffs[Math.floor(Math.random() * staffs.length)];
+    html += `
+    <h2>${singleStaff.name}</h2>
+    <hr>
+    <h3>${singleStaff.email}</h3>
+  `;
+  console.log(html);
+
+  modal.innerHTML = html;
+});
 
 //Close modal
+const closeModal = document.querySelector('.modal-close');
 closeModal.addEventListener('click', e => {
-    let modal = document.querySelector('.overlay');
-    modal.classList.add('hidden');
+    overlay.classList.add('hidden');
+    html = '';
 });
