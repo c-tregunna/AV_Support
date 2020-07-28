@@ -59,8 +59,21 @@ closeModal.addEventListener('click', e => {
 //thank you for form submit
 
 const formSubmit = document.querySelector('.submit');
+function validateForm() {
+    let userName = document.forms["contact-form"]["user_name"].value;
+    let userEmail = document.forms["contact-form"]["user_email"].value;
+    let userMessage = document.forms["contact-form"]["user_message"].value;
+
+    if (userName === "" || userEmail === "" || userMessage === "") {
+      alert("Please complete all section of the form.");
+      return false;
+    } else {
+        alert("Thank you. Your message has been sent and we will be in touch as soon as possible");
+        return true;
+    }
+  }
 
 formSubmit.addEventListener('click', e => {
     e.preventDefault();
-    alert('Thank you, you query has been submitted and we will be in touch soon');
+    validateForm();
 });
