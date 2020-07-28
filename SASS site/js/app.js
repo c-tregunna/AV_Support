@@ -73,7 +73,7 @@ function validateForm() {
     }
   }
 
-const formSubmit = document.querySelector('button');
+const formSubmit = document.querySelector('.submit');
 formSubmit.addEventListener('click', e => {
     e.preventDefault();
     validateForm();
